@@ -1,0 +1,236 @@
+[gd_scene format=3 uid="uid://dua73ytgqhpdm"]
+
+[ext_resource type="Script" uid="uid://dq7wx6ueevh3e" path="res://ui/main_menu/main_menu.gd" id="1_5seab"]
+[ext_resource type="PackedScene" uid="uid://dap3o436pbq6y" path="res://scenes/pause_menu/pause_menu.tscn" id="11_lqpn7"]
+[ext_resource type="Theme" path="res://ui/theme/menu_theme.tres" id="20_theme"]
+[ext_resource type="Script" uid="uid://xgmw435e804i" path="res://ui/theme/focus_slider.gd" id="21_slider"]
+
+[node name="MainMenu" type="Node2D" unique_id=2068258826]
+script = ExtResource("1_5seab")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1122845074]
+
+[node name="Backdrop" type="Panel" parent="Background" unique_id=423590468]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_type_variation = &"Backdrop"
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=1566337340]
+
+[node name="MainPanel" type="PanelContainer" parent="menu" unique_id=777813401]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_right = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("20_theme")
+
+[node name="MarginContainer" type="MarginContainer" parent="menu/MainPanel" unique_id=1613353522]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/MainPanel/MarginContainer" unique_id=1245424222]
+layout_mode = 2
+
+[node name="Eyebrow" type="Label" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=280083926]
+layout_mode = 2
+theme_type_variation = &"Eyebrow"
+text = "INDIE GAME"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=1717877164]
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "STARTER KIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="start" type="Button" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=862426001]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "START GAME"
+
+[node name="load" type="Button" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=1397168083]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "LOAD GAME"
+
+[node name="settings" type="Button" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=1908399796]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="controls" type="Button" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=547700511]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "CONTROLS"
+
+[node name="quit" type="Button" parent="menu/MainPanel/MarginContainer/VBoxContainer" unique_id=376921350]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "QUIT"
+
+[node name="SettingsPanel" type="PanelContainer" parent="menu" unique_id=514522889]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_right = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("20_theme")
+theme_type_variation = &"SettingsPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="menu/SettingsPanel" unique_id=212668237]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/SettingsPanel/MarginContainer" unique_id=454220222]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=721553055]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeLabel" type="Label" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=1561229315]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "VOLUME"
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=2069249067]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+max_value = 5.0
+step = 0.5
+value = 1.0
+script = ExtResource("21_slider")
+
+[node name="ResolutionLabel" type="Label" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=557950461]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "RESOLUTION"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=760169461]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+alignment = 1
+
+[node name="LanguageLabel" type="Label" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=1535816958]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_type_variation = &"MutedLabel"
+text = "LANGUAGE"
+vertical_alignment = 1
+
+[node name="LanguageSelector" type="OptionButton" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=259580146]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+alignment = 1
+
+[node name="FullscreenCheckbox" type="CheckBox" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=1784173247]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+text = "FULLSCREEN"
+alignment = 1
+
+[node name="BackButton" type="Button" parent="menu/SettingsPanel/MarginContainer/VBoxContainer" unique_id=1609633977]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_type_variation = &"BackButton"
+text = "BACK"
+
+[node name="ControlsPanel" type="PanelContainer" parent="menu" unique_id=274090285]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_right = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("20_theme")
+theme_type_variation = &"ControlsPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="menu/ControlsPanel" unique_id=1591637657]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu/ControlsPanel/MarginContainer" unique_id=1728306443]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="menu/ControlsPanel/MarginContainer/VBoxContainer" unique_id=2135189802]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_type_variation = &"Title"
+text = "CONTROLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlsListPanel" type="PanelContainer" parent="menu/ControlsPanel/MarginContainer/VBoxContainer" unique_id=242927142]
+layout_mode = 2
+theme_type_variation = &"ControlsListPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="menu/ControlsPanel/MarginContainer/VBoxContainer/ControlsListPanel" unique_id=390708046]
+layout_mode = 2
+
+[node name="ControlsScroll" type="ScrollContainer" parent="menu/ControlsPanel/MarginContainer/VBoxContainer/ControlsListPanel/MarginContainer"]
+custom_minimum_size = Vector2(0, 390)
+layout_mode = 2
+horizontal_scroll_mode = 0
+follow_focus = true
+
+[node name="ControlsList" type="VBoxContainer" parent="menu/ControlsPanel/MarginContainer/VBoxContainer/ControlsListPanel/MarginContainer/ControlsScroll" unique_id=740630995]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BackButton" type="Button" parent="menu/ControlsPanel/MarginContainer/VBoxContainer" unique_id=2144949437]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_type_variation = &"BackButton"
+text = "BACK"
+
+[node name="PauseMenu" parent="." unique_id=1909309180 instance=ExtResource("11_lqpn7")]
+
+[connection signal="focus_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/start" to="." method="_on_start_focus_entered"]
+[connection signal="mouse_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/start" to="." method="_on_start_mouse_entered"]
+[connection signal="pressed" from="menu/MainPanel/MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="focus_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/load" to="." method="_on_load_focus_entered"]
+[connection signal="mouse_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/load" to="." method="_on_load_mouse_entered"]
+[connection signal="pressed" from="menu/MainPanel/MarginContainer/VBoxContainer/load" to="." method="_on_load_pressed"]
+[connection signal="focus_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/settings" to="." method="_on_settings_focus_entered"]
+[connection signal="mouse_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="pressed" from="menu/MainPanel/MarginContainer/VBoxContainer/settings" to="." method="_on_settings_pressed"]
+[connection signal="focus_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/controls" to="." method="_on_controls_focus_entered"]
+[connection signal="mouse_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/controls" to="." method="_on_controls_mouse_entered"]
+[connection signal="pressed" from="menu/MainPanel/MarginContainer/VBoxContainer/controls" to="." method="_on_controls_pressed"]
+[connection signal="focus_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_focus_entered"]
+[connection signal="mouse_entered" from="menu/MainPanel/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="menu/MainPanel/MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="menu/SettingsPanel/MarginContainer/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="item_selected" from="menu/SettingsPanel/MarginContainer/VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="menu/SettingsPanel/MarginContainer/VBoxContainer/LanguageSelector" to="." method="_on_language_selector_item_selected"]
+[connection signal="toggled" from="menu/SettingsPanel/MarginContainer/VBoxContainer/FullscreenCheckbox" to="." method="_on_fullscreen_checkbox_toggled"]
+[connection signal="focus_entered" from="menu/SettingsPanel/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_focus_entered"]
+[connection signal="mouse_entered" from="menu/SettingsPanel/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_mouse_entered"]
+[connection signal="pressed" from="menu/SettingsPanel/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="menu/ControlsPanel/MarginContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]

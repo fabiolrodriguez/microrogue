@@ -1,0 +1,8 @@
+# Godot and development artifacts
+.godot/
+/android/
+.DS_Store
+__pycache__/
+*.pyc
+artifacts/
+builds/
